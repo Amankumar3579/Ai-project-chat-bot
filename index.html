@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Restaurant Finder</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="chat-container">
+      <div class="chat-header">
+        <div class="header-content">
+          <i class="fas fa-utensils"></i>
+          <div class="header-text">
+            <h1>Restaurant Finder</h1>
+            <p>Find your perfect dining spot</p>
+          </div>
+        </div>
+        <div class="status-indicator">
+          <span class="status-dot"></span>
+          <span class="status-text">Online</span>
+        </div>
+      </div>
+
+      <div class="chat-box" id="chat-box">
+        <div class="welcome-message">
+          <div class="bot-avatar">
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="message bot">
+            <p>👋 Hello! I'm your Restaurant Finder Assistant.</p>
+            <p>I'll help you discover the perfect restaurant. To get started, please share your location (city or area).
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="input-container">
+        <div class="input-wrapper">
+          <input type="text" id="user-input" placeholder="Type your message here..." autocomplete="off">
+          <button id="send-btn" class="send-button">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+        <div class="suggestion-chips">
+          <button class="chip" onclick="suggestLocation('New York')">New York</button>
+          <button class="chip" onclick="suggestCuisine('Italian')">Italian</button>
+          <button class="chip" onclick="suggestCuisine('Chinese')">Chinese</button>
+          <button class="chip" onclick="suggestBudget('$$')">Mid-range</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
